@@ -44,7 +44,9 @@ public class FilePicker extends ListActivity {
 	                    dir.add(new Option(ff.getName(),"Folder",ff.getAbsolutePath(),false));
 	                else
 	                {
-	                    fls.add(new Option(ff.getName(),"File",ff.getAbsolutePath(),false));
+	                	String filename=ff.getName();
+	                	String ext = filename.substring(filename.lastIndexOf('.')+1, filename.length());
+	                    if(ext.equals("mp3") || ext.equals("wav"))fls.add(new Option(ff.getName(),"File",ff.getAbsolutePath(),false));
 	                }
 	             }
 	         }catch(Exception e)

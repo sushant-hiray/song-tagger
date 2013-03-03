@@ -8,14 +8,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Home" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
     <Button android:id="@+id/close"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
+    android:layout_centerInParent="true"
     android:text="Pick Music files" 
     android:onClick="callFilePicker"/>
 

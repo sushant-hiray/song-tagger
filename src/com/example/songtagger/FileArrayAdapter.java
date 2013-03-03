@@ -70,13 +70,13 @@ public class FileArrayAdapter extends ArrayAdapter<Option>{
 	        viewHolder.checkbox.setChecked(items.get(position).getChecked());
 	        //Now set the appropriate icons
 	        if (items.get(position).getData()=="File"){
-	        	viewHolder.image.setImageResource(R.drawable.ic_file);
+	        	viewHolder.image.setImageResource(R.drawable.ic_launcher);
 	        }
 	        else if (items.get(position).getData()=="Folder"){
 	        	viewHolder.image.setImageResource(R.drawable.ic_folder);
 	        }
 	        else if (items.get(position).getData()=="Parent"){
-	        	viewHolder.image.setImageResource(R.drawable.ic_launcher);
+	        	viewHolder.image.setImageResource(R.drawable.back);
 	        }
 	        
 	        return convertView;
