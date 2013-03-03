@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.songtagger"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+	 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.songtagger.Home"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.songtagger.FilePicker"
+            android:label="@string/title_activity_file_picker" >
+        </activity>
+        <activity
+            android:name="com.example.songtagger.Option"
+            android:label="@string/title_activity_option" >
+        </activity>
+        <activity
+            android:name="com.example.songtagger.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.example.songtagger.FileArrayAdapter"
+            android:label="@string/title_activity_file_array_adapter" >
+        </activity>
+        <activity
+            android:name="com.example.songtagger.SelectedSongs"
+            android:label="@string/title_activity_selected_songs" >
+        </activity>
+        <activity
+            android:name="com.example.songtagger.EditDetails"
+            android:label="@string/title_activity_edit_details" >
+        </activity>
+    </application>
+
+</manifest>
