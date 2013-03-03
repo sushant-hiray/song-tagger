@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -54,7 +55,28 @@ public class SelectedSongs extends ListActivity {
 		Bundle b=new Bundle();
 		b.putString("path", path);
 		myIntent.putExtras(b);
-		this.startActivity(myIntent);
+		this.startActivityForResult(myIntent,1);
 	}
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		  if (requestCode == 1) {
+
+		     if(resultCode == RESULT_OK){      
+		         String result=data.getStringExtra("result");
+		         Log.d("returned string..........",result);
+		         if(result.equals("1")){
+		        	 Toast.makeText(this.getApplicationContext(), "details updated",Toast.LENGTH_SHORT).show();
+		         }
+		         else{
+		        	 Toast.makeText(this.getApplicationContext(), "sorry couln't read the tag",Toast.LENGTH_SHORT).show();
+		         }
+		     }
+		     if (resultCode == RESULT_CANCELED) {    
+		         //Write your code on no result return 
+		     }
+		  }
+		  
+		}//onActivityResult
 
 }
